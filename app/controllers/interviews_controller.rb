@@ -51,9 +51,9 @@ class InterviewsController < ApplicationController
   end
 
   def sendmail_request
-    InterviewMailer.sendmail_confirm(current_user, params[:user]).deliver
+    InterviewMailer.sendmail_confirm(current_user, params[:user][:email]).deliver
     flash[:success] = '申請が完了しました'
-    redirect_to user_interviews_path(id: current_user)
+    redirect_to user_interviews_path(user_id: current_user)
   end
 
   private

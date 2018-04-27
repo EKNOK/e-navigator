@@ -1,4 +1,4 @@
-<%= form_for @user, url: sendmail_request_path(user_id: current_user) do |f| %>
-  <%= f.select :email, @users.map { |user| [user.email] }, {}, { class: 'form-control bootstrap-date' } %>
-  <%= f.submit '申請', class: 'btn btn-success' %>
+<%= form_tag("/sendmail_request", method: "post") do %>
+  <%= select :user, :email, @users.map { |user| [user.email] }, {}, { class: 'form-control bootstrap-date' } %>
+  <%= submit_tag "申請", class: 'btn btn-success' %>
 <% end %>
