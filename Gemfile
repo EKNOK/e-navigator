@@ -22,8 +22,6 @@ gem 'bootstrap'
 gem 'devise'
 # devise for bootstrap
 gem 'devise-bootstrap-views'
-# letter_opener_web
-gem 'letter_opener_web'
 # .env から環境変数を読み込み
 gem 'dotenv-rails'
 # Use Uglifier as compressor for JavaScript assets
