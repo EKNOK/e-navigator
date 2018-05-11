@@ -1,0 +1,4 @@
+<%= form_tag("/sendmail_request", method: "post") do %>
+  <%= select :user, :email, @users.map { |user| [user.email] }, {}, { class: 'form-control bootstrap-date' } %>
+  <%= submit_tag "申請", class: 'btn btn-success' %>
+<% end %>

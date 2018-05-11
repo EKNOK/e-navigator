@@ -22,6 +22,8 @@ gem 'bootstrap'
 gem 'devise'
 # devise for bootstrap
 gem 'devise-bootstrap-views'
+# .env から環境変数を読み込み
+gem 'dotenv-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -49,6 +51,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # 開発用のletter_opener_webを設定
+  gem 'letter_opener_web'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
